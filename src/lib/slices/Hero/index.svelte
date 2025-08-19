@@ -18,7 +18,7 @@
 			<div
 				class="relative z-10 row-span-1 row-start-1 -my-10 aspect-[1/1.3] overflow-hidden md:col-span-1 md:col-start-2 md:mt-0"
 			>
-				<Scene/>
+				<Scene />
 			</div>
 			<div class="col-start-1 md:row-start-1">
 				<h1
