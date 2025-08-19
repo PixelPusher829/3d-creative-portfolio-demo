@@ -47,7 +47,7 @@
 <section
 	data-slice-type={slice.slice_type}
 	data-slice-variation={slice.variation}
-	class="bg-slate-900 px-4 md:px-6"
+	class="px-4 md:px-6"
 >
 	<div class="mx-auto w-full max-w-7xl">
 		<div class="grid min-h-[65vh] grid-cols-1 items-center md:grid-cols-2">
