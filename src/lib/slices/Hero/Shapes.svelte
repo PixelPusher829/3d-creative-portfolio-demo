@@ -6,6 +6,8 @@
 
 	interactivity();
 	transitions();
+
+
 </script>
 
 <T.PerspectiveCamera makeDefault position={[0, 0, 25]} fov={30} aspect={1} near={1} far={40} />

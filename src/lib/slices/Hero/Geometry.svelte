@@ -4,11 +4,18 @@
 	import * as THREE from 'three';
 	import gsap from 'gsap';
 	import { elasticOut } from 'svelte/easing';
-	export let position: [number, number, number] = [0, 0, 0];
-	export let geometry: THREE.BufferGeometry = new THREE.IcosahedronGeometry(3);
-	export let rate = 0.5;
 
-	let visible = false;
+	let {
+		position = [0, 0, 0],
+		geometry = new THREE.IcosahedronGeometry(3),
+		rate = 0.5
+	}: {
+		position: [number, number, number];
+		geometry: THREE.BufferGeometry;
+		rate: number;
+	} = $props();
+
+	let visible = $state(false);
 
 	const materialParams = [
 		{ color: 0x2ecc71, roughness: 0 },

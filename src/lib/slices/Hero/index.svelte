@@ -17,12 +17,12 @@
 		tl.fromTo(
 			'.name-animation',
 			{
-				y: -100,
+				x: -100,
 				opacity: 0,
 				rotate: -10
 			},
 			{
-				y: 0,
+				x: 0,
 				opacity: 1,
 				rotate: 0,
 				ease: 'elastic.out(1, 0.3)',
@@ -83,6 +83,3 @@
 	</div>
 </section>
 
-<style>
-	@reference "tailwindcss";
-</style>
