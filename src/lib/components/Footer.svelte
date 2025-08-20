@@ -4,12 +4,12 @@
 	import IconGithub from '~icons/fa-brands/github';
 	import IconLinkedin from '~icons/fa-brands/linkedin-in';
 	import IconInstagram from '~icons/fa-brands/instagram';
+	import Bounded from './Bounded.svelte';
 
 	let { settings } = $props();
-	
 </script>
 
-<footer class="text-slate-600 max-w-7xl mx-auto relative" >
+<Bounded as="footer" class="text-slate-600">
 	<div
 		class="container mx-auto mt-20 flex flex-col items-center justify-between gap-6 py-8 sm:flex-row"
 	>
@@ -33,12 +33,12 @@
 		</div>
 		<nav class="navigation" aria-label="Footer Navigation">
 			<ul class="flex items-center gap-1">
-				{#each settings.data.nav_item as { link, label }, index}
+				{#each settings.data.nav_item as { link }, index}
 					<li>
 						<PrismicLink
 							field={link}
 							class="transition-color block px-3 py-1 text-base font-bold text-slate-100 duration-150 hover:text-yellow-400"
-							>{label}</PrismicLink
+							></PrismicLink
 						>
 					</li>
 					{#if index < settings.data.nav_item.length - 1}
@@ -77,4 +77,4 @@
 			{/if}
 		</div>
 	</div>
-</footer>
+</Bounded>

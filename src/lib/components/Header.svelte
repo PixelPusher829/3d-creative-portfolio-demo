@@ -50,15 +50,14 @@
 						<IconClose/>
 					</button>
 				</li>
-				{#each settings.data.nav_item as { label, link }}
+				{#each settings.data.nav_item as { link }}
 					<li class="first:mt-8">
-						<NavBarLink field={link} {label} {onLinkClick} type="mobile" />
+						<NavBarLink field={link} {onLinkClick} type="mobile" />
 					</li>
 				{/each}
 				{#if isFilled.link(settings.data.cta_link)}
 					<Button
 						linkField={settings.data.cta_link}
-						label={settings.data.cta_label}
 						className="ml-3"
 						showIcon={true}
 					/>
@@ -66,15 +65,14 @@
 			</ul>
 			<!-- Desktop Nav -->
 			<ul class="relative z-50 hidden flex-row items-center gap-1 bg-transparent py-0 md:flex">
-				{#each settings.data.nav_item as { label, link }}
+				{#each settings.data.nav_item as { link }}
 					<li>
-						<NavBarLink field={link} {label} {onLinkClick} type="desktop" />
+						<NavBarLink field={link} {onLinkClick} type="desktop" />
 					</li>
 				{/each}
 				{#if isFilled.link(settings.data.cta_link)}
 					<Button
 						linkField={settings.data.cta_link}
-						label={settings.data.cta_label}
 						className=""
 						showIcon={true}
 					/>

@@ -1,16 +1,20 @@
 <script lang="ts">
-	import type { KeyTextField, LinkField } from '@prismicio/client';
+	import { asText, type LinkField } from '@prismicio/client';
 	import { PrismicLink } from '@prismicio/svelte';
+	import { render } from 'svelte/server';
 	import IconArrow from '~icons/ic/baseline-arrow-outward';
+	import NavBarLink from './NavBarLink.svelte';
 
 	let {
 		linkField,
-		label,
 		showIcon = true,
 		className = ''
-	}: { linkField: LinkField; label: KeyTextField; showIcon: boolean; className: string } = $props();
+	}: { linkField: LinkField; showIcon: boolean; className: string } = $props();
 
 	export { className as class };
+
+	const buttonText = linkField.text as string
+
 </script>
 
 <PrismicLink
@@ -20,9 +24,9 @@
 	<span
 		class={'absolute inset-0 z-0 h-full translate-y-9 bg-yellow-300 transition-transform duration-300 ease-in-out group-hover:translate-y-0'}
 	></span>
-	<span class="relative flex items-center justify-center gap-2"
-		>{label}
+	<span class="relative flex items-center justify-center gap-2">
 		{#if showIcon}
+			{buttonText}
 			<IconArrow />
 		{/if}</span
 	>

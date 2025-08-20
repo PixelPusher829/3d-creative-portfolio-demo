@@ -29,13 +29,6 @@
 								"allowText": true,
 								"repeat": false
 							}
-						},
-						"label": {
-							"type": "Text",
-							"config": {
-								"label": "Label",
-								"placeholder": ""
-							}
 						}
 					}
 				}
@@ -49,13 +42,6 @@
 					"allowTargetBlank": true,
 					"allowText": true,
 					"repeat": false
-				}
-			},
-			"cta_label": {
-				"type": "Text",
-				"config": {
-					"label": "CTA Label",
-					"placeholder": ""
 				}
 			},
 			"github_link": {

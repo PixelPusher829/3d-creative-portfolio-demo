@@ -1,0 +1,56 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "perfectly",
+				"type": "Text"
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Reprehenderit Lorem fugiat nostrud sit aliqua nulla adipisicing irure amet reprehenderit sit minim sit reprehenderit. Reprehenderit magna in fugiat sit consequat commodo reprehenderit laboris eiusmod consequat. Irure reprehenderit in deserunt et ipsum qui labore deserunt."
+						}
+					}
+				]
+			},
+			"cta_button": {
+				"key": "a3931b1a-b131-4048-a14b-6f96fe34b18c",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev",
+					"text": "worried"
+				}
+			},
+			"avatar": {
+				"__TYPE__": "ImageContent",
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1",
+					"width": 5616,
+					"height": 3744
+				},
+				"url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1",
+				"width": 5616,
+				"height": 3744,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "flight",
+				"thumbnails": {}
+			}
+		},
+		"items": []
+	}
+]

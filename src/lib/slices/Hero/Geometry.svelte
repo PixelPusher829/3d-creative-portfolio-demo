@@ -16,7 +16,7 @@
 	} = $props();
 
 	let visible = $state(false);
-
+	
 	const materialParams = [
 		{ color: 0x2ecc71, roughness: 0 },
 		{ color: 0xf1c40f, roughness: 0.4 },
