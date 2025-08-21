@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { isFilled, type Content } from '@prismicio/client';
+	import { isFilled } from '@prismicio/client';
 	import { PrismicLink } from '@prismicio/svelte';
 	import IconGithub from '~icons/fa-brands/github';
 	import IconLinkedin from '~icons/fa-brands/linkedin-in';
@@ -38,8 +38,7 @@
 						<PrismicLink
 							field={link}
 							class="transition-color block px-3 py-1 text-base font-bold text-slate-100 duration-150 hover:text-yellow-400"
-							></PrismicLink
-						>
+						></PrismicLink>
 					</li>
 					{#if index < settings.data.nav_item.length - 1}
 						<span class="text-4xl leading-0 font-thin text-slate-400" aria-hidden="true">/</span>

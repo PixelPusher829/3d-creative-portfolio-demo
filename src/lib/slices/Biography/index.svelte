@@ -2,7 +2,7 @@
 	import Bounded from '$lib/components/Bounded.svelte';
 	import Button from '$lib/components/Button.svelte';
 	import type { Content } from '@prismicio/client';
-	import { PrismicImage, PrismicRichText, type SliceComponentProps } from '@prismicio/svelte';
+	import { PrismicRichText, type SliceComponentProps } from '@prismicio/svelte';
 	import Avatar from './Avatar.svelte';
 
 	type Props = SliceComponentProps<Content.BiographySlice>;
@@ -21,7 +21,7 @@
 		<div class="prose prose-slate prose-invert prose-xl col-start-1">
 			<PrismicRichText field={slice.primary.description} />
 		</div>
-		<Button className="" linkField={slice.primary.cta_button} showIcon={false} />
+		<Button className="" linkField={slice.primary.cta_button} showIcon={true} />
 		<Avatar
 			image={slice.primary.avatar}
 			className="row-start-1 max-w-sm md:col-start-2 md:row-end-3"
