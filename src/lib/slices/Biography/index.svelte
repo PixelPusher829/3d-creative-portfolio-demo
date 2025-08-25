@@ -16,7 +16,7 @@
 	data-slice-type={slice.slice_type}
 	data-slice-variation={slice.variation}
 >
-	<div class="grid md:grid-cols-[2fr,1fr] gap-x-8 gap-y-6">
+	<div class="grid gap-x-8 gap-y-6 md:grid-cols-[2fr,1fr]">
 		<h2>{slice.primary.heading}</h2>
 		<div class="prose prose-slate prose-invert prose-xl col-start-1">
 			<PrismicRichText field={slice.primary.description} />

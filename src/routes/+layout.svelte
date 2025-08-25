@@ -7,9 +7,7 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import Header from '$lib/components/Header.svelte';
 
-	let { children, data} = $props();
-
-
+	let { children, data } = $props();
 </script>
 
 <svelte:head>
@@ -29,7 +27,7 @@
 <main>
 	{@render children()}
 </main>
-<div class="background-gradient absolute inset-0 max-h-screen -z-30"></div>
+<div class="background-gradient absolute inset-0 -z-30 max-h-screen"></div>
 <div
 	class="pointer-events-none absolute inset-0 -z-40 h-full bg-[url('noisetexture.jpg')] opacity-20 mix-blend-soft-light"
 ></div>

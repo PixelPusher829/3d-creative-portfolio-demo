@@ -6,4 +6,3 @@ export async function load() {
 	const settings = await client.getSingle('settings');
 	return { settings };
 }
-

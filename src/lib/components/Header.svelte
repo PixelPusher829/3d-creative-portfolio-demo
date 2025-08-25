@@ -33,7 +33,7 @@
 					onclick={() => (open = true)}
 					class="block p-2 text-2xl text-slate-800 md:hidden"
 				>
-					<IconMenu/>
+					<IconMenu />
 				</button>
 			</div>
 			<!-- Mobile Nav -->
@@ -47,7 +47,7 @@
 						onclick={() => (open = false)}
 						class="fixed top-3 right-4 block p-2 text-2xl text-slate-800 md:hidden"
 					>
-						<IconClose/>
+						<IconClose />
 					</button>
 				</li>
 				{#each settings.data.nav_item as { link }}
@@ -56,11 +56,7 @@
 					</li>
 				{/each}
 				{#if isFilled.link(settings.data.cta_link)}
-					<Button
-						linkField={settings.data.cta_link}
-						className="ml-3"
-						showIcon={true}
-					/>
+					<Button linkField={settings.data.cta_link} className="ml-3" showIcon={true} />
 				{/if}
 			</ul>
 			<!-- Desktop Nav -->
@@ -71,11 +67,7 @@
 					</li>
 				{/each}
 				{#if isFilled.link(settings.data.cta_link)}
-					<Button
-						linkField={settings.data.cta_link}
-						className=""
-						showIcon={true}
-					/>
+					<Button linkField={settings.data.cta_link} className="" showIcon={true} />
 				{/if}
 			</ul>
 		</div>
