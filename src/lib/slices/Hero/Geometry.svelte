@@ -4,6 +4,7 @@
 	import * as THREE from 'three';
 	import gsap from 'gsap';
 	import { elasticOut } from 'svelte/easing';
+	import { onMount } from 'svelte';
 
 	let {
 		position = [0, 0, 0],
@@ -16,6 +17,8 @@
 	} = $props();
 
 	let visible = $state(false);
+	let reducedMotionRate = $state(0);
+	let compoundRate = $derived(rate * reducedMotionRate);
 
 	const materialParams = [
 		{ color: 0x2ecc71, roughness: 0 },
@@ -67,14 +70,19 @@
 			delay: gsap.utils.random(0, 300)
 		};
 	});
+
+	onMount(() => {
+		const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+		reducedMotionRate = prefersReducedMotion ? 0 : 1;
+	});
 </script>
 
 <T.Group position={position.map((p) => p * 2) as [number, number, number]}>
 	<Float
-		speed={5 * rate}
-		rotationSpeed={5 * rate}
-		rotationIntensity={6 * rate}
-		floatIntensity={5 * rate}
+		speed={5 * compoundRate}
+		rotationSpeed={5 * compoundRate}
+		rotationIntensity={6 * compoundRate}
+		floatIntensity={5 * compoundRate}
 	>
 		<T.Mesh
 			{visible}
